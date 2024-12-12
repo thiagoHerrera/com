@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad Calórica</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/actividad.css' %}">
+</head>
+<body>
+
+    <header>
+        <h1 class="text-center mt-4">Actividad Calórica</h1>
+    </header>
+
+    <section class="container mt-5">
+        <div class="main-content">
+            <div class="activity-circle" id="progressCircle">
+                <span id="calorieCount">0</span> kcal
+            </div>
+
+            <div class="add-food-form">
+                <h3>Añadir un nuevo alimento:</h3>
+                <form method="POST" action="{% url 'agregarComida' %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="foodName">Nombre del alimento:</label>
+                        <input type="text" id="foodName" name="name" required class="form-control" placeholder="Nombre del alimento">
+                    </div>
+                    <div class="form-group">
+                        <label for="foodCalories">Calorías:</label>
+                        <input type="number" id="foodCalories" name="calories" required class="form-control" placeholder="Calorías">
+                    </div>
+                    <div class="form-group">
+                        <label for="foodGrams">Gramos:</label>
+                        <input type="number" id="foodGrams" name="grams" required class="form-control" placeholder="Gramos">
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-3">Añadir Alimento</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="food-list mt-5">
+            <h2>Selecciona los alimentos:</h2>
+            <ul id="foodList">
+                {% for food in foods %}
+                    <li onclick="addCalories({{ food.calories }})">
+                        {{ food.name }} - {{ food.calories }} kcal por {{ food.grams }}g
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>Derechos reservados 2024 por TW Company Fitness</p>
+    </footer>
+
+    <script>
+        let totalCalories = 0;
+        const calorieGoal = 5000; 
+        const calorieCount = document.getElementById('calorieCount');
+        const progressCircle = document.getElementById('progressCircle');
+
+        function addCalories(calories) {
+            totalCalories += calories;
+            const progress = Math.min(totalCalories / calorieGoal * 100, 100);
+            calorieCount.textContent = totalCalories;
+            progressCircle.style.background = `conic-gradient(#00a8ff ${progress}%, #e0e0e0 ${progress}%)`;
+        }
+    </script>
+</body>
+</html>

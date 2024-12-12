@@ -1,0 +1,95 @@
+body {
+    background-image: url('img/DALL·E\ 2024-10-10\ 18.56.28\ -\ A\ gym-themed\ background\ designed\ to\ complement\ a\ login\ page\ panel\ in\ the\ center.\ The\ background\ should\ feature\ elemen.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh; /* Asegúrate de que el body ocupe toda la altura */
+    margin: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.login-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    width: 400px; /* Ancho fijo para el contenedor */
+    position: absolute; /* Cambiado a absolute */
+    top: 50%; /* Centrado verticalmente */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste para centrar */
+    text-align: center;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"],
+.login-form input[type="email"],
+.login-form input[type="submit"] {
+    width: 100%; 
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.login-form input[type="submit"] {
+    background-color: #4eb0c9;
+    color: white; 
+    cursor: pointer; 
+    border: none; 
+}
+
+.login-form input[type="submit"]:hover {
+    background-color: #95c4fa; /* Color al pasar el mouse sobre el botón */
+}
+
+.alert {
+    margin-top: 10px; /* Espaciado para las alertas */
+}
+
+#contact {
+    color: #007bff; /* Color del enlace */
+    text-decoration: none; /* Sin subrayado */
+}
+
+#contact:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+.fondo {
+    background-color: rgb(255, 255, 255);
+}
+
+.partes {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 20px;
+    padding-left: 30%;
+}
+
+.partes {
+    padding-left: 20px;
+}
+
+.img {
+    padding-top: 80px;
+    padding-left: 45%;
+}
+
+#inicio,
+#contact {
+    font-size: 15px; 
+    padding: 1px 0; 
+    color: rgb(53, 35, 59);
+    padding-bottom: 27px;
+}
+
+#inicio:active,
+#contact:active {
+    font-size: 20px; 
+    padding: 50px 0; 
+}

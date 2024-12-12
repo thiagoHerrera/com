@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    background-color: #2e2e2e;
+    padding: 10px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    max-height: 80px;
+}
+
+.btn-header {
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-header:hover {
+    background-color: #007acc;
+}
+
+.main-content {
+    height: calc(100vh - 150px);
+    background-color: #3e4246;
+    padding: 20px;
+}
+
+.suplementos-list {
+    display: flex;
+    flex-wrap: wrap; /* Asegura que los suplementos se ajusten a nuevas filas */
+    gap: 20px; /* Espacio entre las tarjetas */
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.suplemento-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px; /* Ajusta el ancho de las tarjetas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Alineación centrada del contenido dentro de la tarjeta */
+}
+
+.suplemento-card img {
+    width: 100%;
+    height: 150px; /* Ajuste de tamaño de la imagen */
+    object-fit: cover; /* Para que la imagen se ajuste bien dentro del espacio */
+}
+
+footer {
+    background-color: #2e2e2e;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.suplemento-card input[type="file"],
+.suplemento-card input[type="text"],
+.suplemento-card textarea {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+body {
+    background-image: url('img/DALL·E 2024-10-10 18.56.28 - A gym-themed background designed to complement a login page panel in the center. The background should feature elemen.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.login-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    position: relative;
+    text-align: center;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"],
+.login-form input[type="submit"] {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.login-form input[type="submit"] {
+    background-color: #4eb0c9;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.login-form input[type="submit"]:hover {
+    background-color: #95c4fa;
+}
+
+#contact {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#contact:hover {
+    text-decoration: underline;
+}
+
+.alert {
+    margin-top: 10px;
+}
+
+.fondo{
+    background-color:rgb(255, 255, 255);
+}
+.partes{ 
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 20px;
+    padding-left:30%;
+}
+
+.partes{
+    padding-left: 20px;
+}
+
+.img{
+    padding-top: 80px;
+    padding-left: 45%;
+} 
+
+#inicio,
+#contact {
+    font-size: 15px; 
+    padding: 1px 0; 
+    color: rgb(53, 35, 59);
+    padding-bottom: 27px;
+}
+
+#inicio:active,
+#contact:active {
+    font-size: 20px; 
+    padding: 50px 0; 
+}
